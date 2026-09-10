@@ -1,0 +1,9 @@
+{
+  "name": "vedaville-stories",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "check": "node --check app.js && node --check api/_supabase.js && node --check api/start-submission.js && node --check api/submit-story.js && node --check api/story-submissions.js && node --check worker/index.js"
+  }
+}
