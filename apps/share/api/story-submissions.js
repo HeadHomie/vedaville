@@ -180,7 +180,7 @@ async function signedPhotoUrl(path) {
     });
     const result = await response.json().catch(() => ({}));
     if (!response.ok || !(result.signedURL || result.signedUrl)) return "";
-    return new URL(result.signedURL || result.signedUrl, supabaseUrl("/")).toString();
+    return new URL(`/storage/v1${result.signedURL || result.signedUrl}`, supabaseUrl("/")).toString();
   } catch {
     return "";
   }
