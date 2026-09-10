@@ -30,7 +30,9 @@ export default async function handler(request) {
       uploads.push({
         original_name: String(file.name).slice(0, 255),
         path,
-        signed_url: new URL(signed.url, supabaseUrl("/")).toString()
+        // Supabase returns a path rooted at `/object/...`, while browser uploads
+        // must go through the Storage API prefix.
+        signed_url: new URL(`/storage/v1${signed.url}`, supabaseUrl("/")).toString()
       });
     }
     return json({ submission_id: body.submission_id, uploads });
