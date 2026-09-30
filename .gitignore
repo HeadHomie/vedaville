@@ -5,3 +5,8 @@
 .wrangler
 dist
 node_modules
+
+# Separate local projects with their own Git histories.
+.claude/
+pro/
+stories/
