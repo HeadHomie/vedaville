@@ -1,0 +1,8 @@
+# Deploy only the static join site from this repository root.
+/*
+!index.html
+!assets
+!favicon.ico
+!robots.txt
+!sitemap.xml
+!vercel.json

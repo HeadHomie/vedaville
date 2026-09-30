@@ -18,3 +18,7 @@ Each application is deployed independently. Runtime credentials are configured i
 Run Git commands from the repository root when changing the join landing page. The local `pro/` and `stories/` directories are separate Git checkouts and are ignored by this repository; changes to them are not part of a join-site commit.
 
 The local `.vercel/project.json` links this directory to the `vedaville-join` Vercel project. It is machine-specific and ignored by Git.
+
+## Deploying the join site
+
+The join site is a static Vercel project. Run `vercel deploy --prod` from this repository root and confirm that `join.vedaville.com` points to the new production deployment. A GitHub push by itself does not confirm that the custom domain was updated. `.vercelignore` limits uploads to the join site's HTML, assets, and site configuration.
