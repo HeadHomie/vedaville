@@ -13,7 +13,7 @@ Source code for Vedaville web properties.
 
 Each application is deployed independently. Runtime credentials are configured in the hosting provider and are never committed to this repository.
 
-The share app's Vercel project is Big Vision / `vedaville-stories` (`prj_o6Yw1AYFNTt2HI4GKSK1O9z7I8me`), with `apps/share` as its project root. Its own `.vercelignore` overrides the repository root's join-only allowlist. Keep that override: without it, Git deployments exclude the share app and publish an empty site.
+The share app's Vercel project is Big Vision / `vedaville-stories` (`prj_o6Yw1AYFNTt2HI4GKSK1O9z7I8me`), with `apps/share` as its project root. The repository's `.vercelignore` must include `apps` so Git deployments retain the share app. The join and share builds each serve only their own `dist/client` output.
 
 ## Working locally
 
@@ -23,4 +23,4 @@ The local `.vercel/project.json` links this directory to the Big Vision `vedavil
 
 ## Deploying the join site
 
-The join site is a static Vercel project. Run `./scripts/deploy-join.sh` from this repository root. The script checks the linked project ID before deploying to Big Vision. Confirm that `join.vedaville.com` points to the new production deployment. A GitHub push by itself does not confirm that the custom domain was updated. `.vercelignore` limits uploads to the join site's HTML, assets, and site configuration.
+The join site is a static Vercel project. Run `./scripts/deploy-join.sh` from this repository root. The script checks the linked project ID before deploying to Big Vision. Confirm that `join.vedaville.com` points to the new production deployment. A GitHub push by itself does not confirm that the custom domain was updated. `scripts/build-join.mjs` copies only the join site's public files into `dist/client`, keeping the share app's source out of the join site's public output.

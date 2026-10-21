@@ -1,4 +1,5 @@
-# Deploy only the static join site from this repository root.
+# Keep source for both Vercel projects. Each project's output directory
+# controls which files are served publicly.
 /*
 !index.html
 !assets
@@ -6,3 +7,5 @@
 !robots.txt
 !sitemap.xml
 !vercel.json
+!apps
+!scripts

@@ -1,4 +1,6 @@
 {
+  "buildCommand": "node scripts/build-join.mjs",
+  "outputDirectory": "dist/client",
   "cleanUrls": true,
   "trailingSlash": false,
   "headers": [
