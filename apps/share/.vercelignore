@@ -1,0 +1,12 @@
+# Override the repository root's join-only deployment allowlist.
+/*
+!index.html
+!styles.css
+!app.js
+!assets
+!api
+!package.json
+!scripts
+!worker
+!vercel.json
+!.vercelignore

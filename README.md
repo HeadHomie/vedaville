@@ -13,6 +13,8 @@ Source code for Vedaville web properties.
 
 Each application is deployed independently. Runtime credentials are configured in the hosting provider and are never committed to this repository.
 
+The share app's Vercel project is Big Vision / `vedaville-stories` (`prj_o6Yw1AYFNTt2HI4GKSK1O9z7I8me`), with `apps/share` as its project root. Its own `.vercelignore` overrides the repository root's join-only allowlist. Keep that override: without it, Git deployments exclude the share app and publish an empty site.
+
 ## Working locally
 
 Run Git commands from the repository root when changing the join landing page. The local `pro/` and `stories/` directories are separate Git checkouts and are ignored by this repository; changes to them are not part of a join-site commit.
