@@ -76,14 +76,6 @@ header{position:sticky;top:0;z-index:50;background:rgba(36,52,24,.92);backdrop-f
 .nav-login:hover{color:var(--gold-soft)}
 .nav .btn{padding:11px 26px;font-size:14px}
 
-/* productivity pod announcement */
-.pod-banner{background:#f7e8c8;border-bottom:1px solid #d7ae60;color:var(--green-night)}
-.pod-banner-inner{min-height:54px;display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap;padding-top:9px;padding-bottom:9px;text-align:center}
-.pod-banner strong{font-family:var(--serif);font-size:22px;line-height:1.1}
-.pod-banner span{font-size:13px;font-weight:700;letter-spacing:.03em}
-.pod-banner a{color:var(--plum);font-size:13px;font-weight:800;text-underline-offset:4px;white-space:nowrap}
-.pod-banner a:hover{color:var(--plum-dark)}
-
 /* hero */
 .hero{position:relative;background:var(--cream);color:var(--ink);overflow:hidden}
 .hero::before{content:"";position:absolute;inset:0;background:url(assets/hero-community.jpg) center right/cover no-repeat}
@@ -111,33 +103,6 @@ section{padding:104px 0}
 .center .lede{margin:0 auto}
 h2{font-size:clamp(34px,4.2vw,50px);margin-bottom:20px}
 
-/* productivity pod */
-.pod{background:linear-gradient(145deg,#fffcf5 0%,#f4ecda 100%);border-top:1px solid #e9d9b9;border-bottom:1px solid #e9d9b9;scroll-margin-top:92px}
-.pod-intro{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(280px,.75fr);gap:64px;align-items:center}
-.pod .eyebrow{color:#a66d09}
-.pod h2{font-size:clamp(42px,5vw,64px);margin-bottom:18px}
-.pod h2 em{color:#b9821d;font-weight:500}
-.pod-lede{font-size:19px;max-width:690px;color:#46513d}
-.pod-choice{font-size:17px;font-weight:800;color:var(--green-night);margin-top:18px}
-.pod-points{display:flex;flex-wrap:wrap;gap:9px;margin-top:26px}
-.pod-points span{border:1px solid #dbc492;background:rgba(255,255,255,.7);border-radius:999px;padding:7px 13px;font-size:12.5px;font-weight:700;color:#425035}
-.pod-highlight{background:radial-gradient(circle at 100% 0%,rgba(220,190,122,.14),transparent 55%),linear-gradient(135deg,#243418,#304622);border-radius:22px;color:var(--cream);padding:33px 34px;box-shadow:0 20px 42px rgba(36,52,24,.17);position:relative;overflow:hidden}
-.pod-highlight h3{font-size:32px;color:var(--gold-soft)}
-.pod-highlight p{position:relative;z-index:1;font-size:15px;line-height:1.6;color:rgba(248,242,237,.88);margin-top:15px}
-.pod-highlight p strong{color:var(--gold-pale)}
-.pod-actions{display:flex;gap:13px;align-items:center;flex-wrap:wrap;margin-top:32px}
-.pod-actions .btn{padding:13px 26px}
-.pod-pricing{display:grid;grid-template-columns:1fr 1fr;margin-top:38px;background:#fffdfa;border:1px solid #decba3;border-radius:18px;overflow:hidden;box-shadow:0 12px 28px rgba(58,86,40,.06)}
-.pod-price{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:22px 30px}
-.pod-price+.pod-price{border-left:1px solid #e9dcc0}
-.pod-price-label{display:block;font-size:13px;font-weight:800;letter-spacing:.03em;color:#526047}
-.pod-price strong{display:block;font-family:var(--serif);font-size:42px;line-height:1;color:var(--green-night)}
-.pod-price small{display:block;font-size:12px;color:#66715b;margin-top:4px}
-.pod-price-note{grid-column:1/-1;background:#f7e8c8;padding:11px 30px;text-align:center;font-size:14px;font-weight:800;color:var(--green-night)}
-.pod-bottom-cta{display:flex;align-items:center;justify-content:space-between;gap:28px;margin-top:38px;padding:30px 34px;border-radius:18px;background:var(--green-night);color:var(--cream)}
-.pod-bottom-cta h3{color:var(--cream);font-size:29px;margin-bottom:6px}
-.pod-bottom-cta p{font-size:14.5px;color:rgba(248,242,237,.85);max-width:600px}
-.pod-bottom-cta .btn{flex:none;padding:14px 25px;text-align:center}
 
 /* benefits */
 .benefits{background:var(--cream)}
@@ -251,9 +216,6 @@ footer{background:#1c2913;color:rgba(248,242,237,.6);padding:54px 0}
   .show-grid,.comm-grid,.step-grid,.web-grid{grid-template-columns:1fr}
   .show-imgs{margin-bottom:30px}
   .hero-inner{padding:84px 0 96px}
-  .pod-intro{grid-template-columns:1fr;gap:30px}
-  .pod-week-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .pod-bottom-cta{flex-direction:column;align-items:flex-start}
 }
 @media(max-width:600px){
   .bene-grid,.web-grid,.testi-grid,.stats{grid-template-columns:1fr}
@@ -261,16 +223,6 @@ footer{background:#1c2913;color:rgba(248,242,237,.6);padding:54px 0}
   .hero::after{background:linear-gradient(180deg,rgba(248,242,237,.94) 0%,rgba(248,242,237,.86) 55%,rgba(248,242,237,.55) 100%)}
   .show-imgs .mobile{right:0;bottom:-28px}
   .step{padding:36px 28px}
-  .pod-banner-inner{gap:4px 12px}
-  .pod-banner strong{font-size:19px}
-  .pod-banner span{font-size:12px}
-  .pod-highlight{padding:28px}
-  .pod-pricing{grid-template-columns:1fr}
-  .pod-price+.pod-price{border-left:0;border-top:1px solid #e9dcc0}
-  .pod-price{padding:19px 22px}
-  .pod-price-note{padding:12px 22px}
-  .pod-bottom-cta{padding:26px 24px}
-  .pod-bottom-cta .btn{width:100%}
 }
 </style>
 </head>
@@ -285,14 +237,6 @@ footer{background:#1c2913;color:rgba(248,242,237,.6);padding:54px 0}
     </div>
   </div>
 </header>
-
-<div class="pod-banner" role="region" aria-label="Productivity Pod announcement">
-  <div class="wrap pod-banner-inner">
-    <strong>Productivity Pod</strong>
-    <span>Hands-on sessions for healers, practitioners &amp; wellness pros</span>
-    <a href="https://vedaville.com/productivity-pod" target="_blank" rel="noopener">Learn more &amp; get tickets &rarr;</a>
-  </div>
-</div>
 
 <div class="hero" id="top">
   <div class="wrap">
@@ -313,43 +257,6 @@ footer{background:#1c2913;color:rgba(248,242,237,.6);padding:54px 0}
     </div>
   </div>
 </div>
-
-<section class="pod" id="productivity-pod" aria-labelledby="pod-title">
-  <div class="wrap">
-    <div class="pod-intro">
-      <div>
-        <div class="eyebrow">The Healing Society of Nashville presents</div>
-        <h2 id="pod-title">The <em>Productivity Pod</em></h2>
-        <p class="pod-lede">Build the parts of your practice that help the right clients find you, trust you, and keep coming back.</p>
-        <p class="pod-choice">Join the sessions that fit your goals. Each one stands on its own.</p>
-        <div class="pod-points" aria-label="Program highlights">
-          <span>Led by Logan Crowell</span>
-          <span>In person or online</span>
-          <span>Hands-on implementation</span>
-        </div>
-        <div class="pod-actions">
-          <a class="btn btn-plum" href="https://vedaville.com/productivity-pod" target="_blank" rel="noopener">Learn more &amp; get tickets</a>
-        </div>
-      </div>
-      <div class="pod-highlight">
-        <h3>Learn, then put it into practice</h3>
-        <p>Each session pairs <strong>30 minutes of teaching, prep, and Q&amp;A</strong> with <strong>60 minutes of implementation</strong>. Bring a computer and leave with meaningful progress made.</p>
-      </div>
-    </div>
-    <div class="pod-pricing" aria-label="Productivity Pod pricing per session">
-      <div class="pod-price"><div><span class="pod-price-label">Healing Society members</span><small>For each session you attend</small></div><strong>Free</strong></div>
-      <div class="pod-price"><div><span class="pod-price-label">Everyone else</span><small>For each session you attend</small></div><strong>$20</strong></div>
-      <p class="pod-price-note">Pay only for the sessions you choose.</p>
-    </div>
-    <div class="pod-bottom-cta">
-      <div>
-        <h3>Ready to make progress?</h3>
-        <p>Find a session that fits your goals and take the next step in building your practice.</p>
-      </div>
-      <a class="btn btn-gold" href="https://vedaville.com/productivity-pod" target="_blank" rel="noopener">See sessions &amp; get tickets &rarr;</a>
-    </div>
-  </div>
-</section>
 
 <section class="benefits" id="inside">
   <div class="wrap">
